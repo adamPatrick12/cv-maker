@@ -1,6 +1,5 @@
 
 .headerBox{
-    border: red 1px solid;
     width: 100%;
     height: 5rem;
     display: flex;
@@ -56,10 +55,275 @@
   .infoBox{
       display: flex;
       flex-direction: row;
+      margin-top: 20px;
   }
 
   .iconImg{
       width: 1.5rem;
       height: 1.5rem;
       margin-top: 10px;
+  }
+
+  .skillsInput{
+    border: none;
+    height: 1.6rem;
+    width: 10rem;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    color: #519DEF;
+  }
+
+  .skillsInput::placeholder {
+    color: rgb(128, 128, 128);
+    font-size: 20px;
+    font-weight: 800;
+    font-family: Helvetica;
+    color: #519DEF;
+  }
+
+  .skillsInput:focus{
+    outline: none;
+    background-color: rgba(128,128,128,.2);
+    border-radius: 3px;
+  } 
+
+  .skillsBox{
+    margin-top: 4rem;
+    width: 95%;
+  }
+
+  
+
+  hr{
+    margin-left: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .skillsInfo {
+    border: none;
+    height: 1rem;
+    width: 10rem;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: start;
+    color: black;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+  
+  .skillsInfo2{
+    border: none;
+    height: 1rem;
+    width: 10rem;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: start;
+    color: black;
+    margin-left: 3rem;
+    margin-top: 0.3rem;
+  }
+
+  .skillsInfo3{
+    border: none;
+    height: 1rem;
+    width: 10rem;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: start;
+    color: black;
+    margin-left: 3rem;
+    margin-top: rem;
+  }
+
+  .skillsInfo::placeholder, .skillsInfo2::placeholder, .skillsInfo3::placeholder  {
+    color: rgb(128, 128, 128);
+    font-size: 15px;
+    font-weight: 800;
+    font-family: Helvetica;
+    color: black;
+  }
+
+
+  .skillsInfo:focus, .skillsInfo2:focus, .skillsInfo3:focus {
+    outline: none;
+    background-color: rgba(128,128,128,.2);
+    border-radius: 3px;
+  } 
+
+  .skillsInfoBox{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skillsRow{
+    margin: -2px;
+  }
+
+  .subSkill{
+    border: none;
+    height: 1rem;
+    width: 7rem;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    margin-top: 1rem;
+    background-color: #519DEF ;
+    margin-left: 1rem;
+    border-radius: 5px;
+  }
+
+  .subSkill:focus {
+    outline: none;
+    background-color: rgba(128,128,128,.2);
+    border-radius: 5px;
+  } 
+
+  .subSkill::placeholder{
+    color: rgb(128, 128, 128);
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Helvetica;
+    color: black;
+    margin: 0;
+  }
+
+  subSkill:placeholder-shown{
+    background-color: white;
+  }
+
+  .skillsBtn{
+    position: absolute;
+    top: 285px;
+    left: 300px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+
+  .skillsBtn:hover, .skillsBtn2:hover, .skillsBtn3:hover{
+    background-color: black;
+  }
+
+  .skillsBtn2{
+    position: absolute;
+    top: 315px;
+    left: 300px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+
+  .skillsBtn3{
+    position: absolute;
+    top: 345px;
+    left: 300px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+
+  .workDiv{
+    margin-top: 1rem;
+    width: 95%;
+  }
+
+  .workTitle{
+    border: none;
+    height: 1.4rem;
+    width: 10rem;
+    font-family: Helvetica;
+    font-size: 17px;
+    font-weight: 800;
+    text-align: start;
+    color: black;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+
+  .workTitle:focus {
+    outline: none;
+    background-color: rgba(128,128,128,.2);
+    border-radius: 5px;
+  } 
+
+  .workPosition{
+    border: none;
+    height: 1rem;
+    width: 10rem;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: start;
+    color: black;
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+  }
+
+  .workPosition:focus{
+    outline: none;
+    background-color: rgba(128,128,128,.2);
+    border-radius: 5px;
+  }
+  .workPosition::placeholder{
+   color: rgb(128, 128, 128);
+    font-size: 15px;
+    font-weight: 800;
+    font-family: Helvetica;
+    margin: 0;
+  }
+
+
+  .workBox{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .employerBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60rem;
+  }
+
+  .workDate{
+    border: none;
+    height: 1rem;
+    width: 8rem;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: start;
+    color: black;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    font-style: italic;
+  }
+
+  .workDate:focus{
+    outline: none;
+    background-color: rgba(128,128,128,.2);
+    border-radius: 5px;
   }

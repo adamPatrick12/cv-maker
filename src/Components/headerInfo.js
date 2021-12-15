@@ -13,7 +13,7 @@ class Info extends Component{
         return(
             <div className = "infoBox">
                 <img className = "iconImg" src={mail} alt="" />
-                <input className = "infoInput" id = "nameBox" type="text" placeholder = "Your email" /> <span>span</span>
+                <input className = "infoInput" id = "nameBox" type="text" placeholder = "Your email" />
                 <img className = "iconImg" src={github} alt="" />
                 <input className = "infoInput" id = "nameBox" type="text" placeholder = "Github User Name" />
                 <img className = "iconImg" src={website} alt="" />
