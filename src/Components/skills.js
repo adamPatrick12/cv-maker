@@ -40,15 +40,19 @@ class Skills extends Component{
     });
   }
 
-    
+ consoleLog(){
+    console.log("Test")
+ }
 
       
     render(){
         return(
-            <div>   
-            <button className = "skillsBtn"onClick = {this.addSkill}>+</button>
-            <button className = "skillsBtn2"onClick = {this.addSkill2}>+</button> 
-            <button className = "skillsBtn3"onClick = {this.addSkill3}>+</button>   
+            <div> 
+                <div className = "btnPosition">
+                    <button className = "skillsBtn"onClick = {this.addSkill}>+</button>
+                    <button className = "skillsBtn2"onClick = {this.addSkill2}>+</button> 
+                    <button className = "skillsBtn3"onClick = {this.addSkill3}>+</button>
+                </div>      
             <SkillsInfo addSkillDom =  {this.state.skills} addSkillDom2 = {this.state.skills2} addSkillDom3 = {this.state.skills3}/>
             </div>
             

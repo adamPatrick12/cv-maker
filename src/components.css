@@ -71,8 +71,9 @@
     font-family: Helvetica;
     font-size: 20px;
     font-weight: 800;
-    text-align: center;
+    text-align: start;
     color: #519DEF;
+    margin-left: 2.8rem;
   }
 
   .skillsInput::placeholder {
@@ -90,7 +91,7 @@
   } 
 
   .skillsBox{
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 95%;
   }
 
@@ -201,8 +202,8 @@
 
   .skillsBtn{
     position: absolute;
-    top: 285px;
-    left: 300px;
+    top: 15px;
+    left: -40px;
     background-color: rgb(70, 70, 70);
     color: white;
     border-radius: 10px;
@@ -213,14 +214,14 @@
     padding: 0;
   }
 
-  .skillsBtn:hover, .skillsBtn2:hover, .skillsBtn3:hover{
+  .skillsBtn:hover, .skillsBtn2:hover, .skillsBtn3:hover, .jobBtn:hover, .workBtn:hover{
     background-color: black;
   }
 
   .skillsBtn2{
     position: absolute;
-    top: 315px;
-    left: 300px;
+    top: 45px;
+    left: -40px;
     background-color: rgb(70, 70, 70);
     color: white;
     border-radius: 10px;
@@ -233,8 +234,8 @@
 
   .skillsBtn3{
     position: absolute;
-    top: 345px;
-    left: 300px;
+    top: 75px;
+    left: -40px;
     background-color: rgb(70, 70, 70);
     color: white;
     border-radius: 10px;
@@ -259,7 +260,7 @@
     font-weight: 800;
     text-align: start;
     color: black;
-    margin-left: 3rem;
+    margin-left: 1rem;
     margin-top: 1rem;
   }
 
@@ -278,7 +279,7 @@
     font-weight: 400;
     text-align: start;
     color: black;
-    margin-left: 3rem;
+    margin-left: 1rem;
     margin-top: 0.5rem;
   }
 
@@ -295,20 +296,36 @@
     margin: 0;
   }
 
+  .BoxPlacement{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
 
+  
   .workBox{
     display: flex;
     flex-direction: column;
+    width: 95%;
+    margin-top: 5px;
+  }
+
+  .workBox:hover{
+    border: grey 2px dashed
+  }
+
+  .workBox:hover .jobBtn{
+    display: block;
   }
 
   .employerBox{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60rem;
+    width: 98%
   }
 
-  .workDate{
+  .Date{
     border: none;
     height: 1rem;
     width: 8rem;
@@ -317,13 +334,94 @@
     font-weight: 400;
     text-align: start;
     color: black;
-    margin-left: 3rem;
     margin-top: 1rem;
     font-style: italic;
   }
 
-  .workDate:focus{
+  .Date:focus{
     outline: none;
     background-color: rgba(128,128,128,.2);
     border-radius: 5px;
+  }
+
+  li{
+    color: black;
+    margin: 0;
+  }
+
+  ul{
+    margin-top: 5px;
+    margin-left: 0.2rem;
+    list-style-type: square;
+    font-size: 20px;
+   
+  }
+
+  .workBullet{
+    border: none;
+    height: 1rem;
+    width: 95%;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: start;
+    color: black;
+    margin-left: 0.2rem;
+  }
+
+  .workBullet:focus{
+    outline: none;
+    background-color: rgba(128,128,128,.2);
+    border-radius: 5px;
+  }
+
+  .btnPosition{
+    position: relative;
+  }
+
+  .workBtn{
+    position: absolute;
+    top: 70px;
+    left: -70px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+
+  .jobBtn{
+    position: absolute;
+    top: 620px;
+    left: 1540px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 4.5rem;
+    height: 1.5rem;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .titlePosition{
+      width: 95%;
+  }
+  
+  .projectBtn{
+    position: absolute;
+    top: 25px;
+    left: -70px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
   }
