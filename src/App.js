@@ -5,9 +5,11 @@ import Skills from "./Components/skills"
 import Work from "./Components/work"
 import Title from "./Components/titleAndHR"
 import Projects from './Components/projects';
+import Education from './Components/education';
+import Interests from './Components/interest';
 
 const workElement = <Work/>
-
+const projectElement = <Projects/>
 
 class App extends Component {
   constructor(){
@@ -16,9 +18,13 @@ class App extends Component {
     this.state = {
       workDiv: [workElement],
       workArr: [],
+      projectDiv: [projectElement],
+      projectArr: []
     };
 
     this.addWorkDiv = this.addWorkDiv.bind(this);
+    this.addProjectDiv = this.addProjectDiv.bind(this);
+
   }
 
   addWorkDiv() {
@@ -27,19 +33,31 @@ class App extends Component {
     });
   }
   
+  addProjectDiv (){
+    this.setState({
+      projectArr: this.state.projectArr.concat(this.state.projectDiv), 
+    });
+  }
+
   render(){
     return (
       <div className="App">
+        <button className = "jobBtn" onClick = {this.addWorkDiv}>Add Job</button>
+        <button className = "AddprojectBtn" onClick = {this.addProjectDiv}>Add Project</button>
         <div className="App-bg">
           <Name/>
           <Title title = "SKILLS" class = "skillsBox" />
           <Skills />
           <Title title = "WORK" class = "workDiv" />
-          <Work workBtn = {<button className = "jobBtn" onClick = {this.addWorkDiv}>Add Job</button>}/>
+          <Work />
           {this.state.workArr}
           <Title title = "PROJECTS" class = "workDiv" />
           <Projects/>
+          {this.state.projectArr}
           <Title title = "EDUCATION" class = "workDiv" />
+          <Education/>
+          <Title title = "INTERESTS" class = "workDiv" />
+          <Interests/>
         </div>
       </div>
     );

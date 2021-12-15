@@ -24,6 +24,7 @@ class Work extends Component {
     };
 
     this.addWorkBullet = this.addWorkBullet.bind(this);
+    this.removeWork = this.removeWork.bind(this)
   }
 
   addWorkBullet() {
@@ -32,14 +33,20 @@ class Work extends Component {
     });
   }
 
+  removeWork(){
+    this.setState({
+        workList: this.state.workList.slice(0,-1)
+    });
+  }
+
   render() {
     return (
       <div className="BoxPlacement">
-           {this.props.workBtn}
         <div className="btnPosition">
           <button className="workBtn" onClick={this.addWorkBullet}>
             +
           </button>
+          <button className = "BtnRemove" onClick = {this.removeWork}>-</button>
         </div>
         <div className="workBox">
         <div className="btnPosition">

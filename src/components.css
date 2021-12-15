@@ -115,6 +115,8 @@
     margin-left: 3rem;
     margin-top: 1rem;
   }
+
+  
   
   .skillsInfo2{
     border: none;
@@ -214,7 +216,77 @@
     padding: 0;
   }
 
-  .skillsBtn:hover, .skillsBtn2:hover, .skillsBtn3:hover, .jobBtn:hover, .workBtn:hover{
+  .BtnRemove{
+    position: absolute;
+    top: 70px;
+    left: -100px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+
+  .BtnRemove2{
+    position: absolute;
+    top: 24px;
+    left: -100px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+  
+.BtnRemove3{
+  position: absolute;
+    top: 15px;
+    left: -70px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+}  
+
+.BtnRemove4{
+  position: absolute;
+    top: 45px;
+    left: -70px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+}
+
+.BtnRemove5{
+  position: absolute;
+    top: 75px;
+    left: -70px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+}
+
+  .skillsBtn:hover, .skillsBtn2:hover, .skillsBtn3:hover, .jobBtn:hover, .workBtn:hover, .AddprojectBtn:hover, .BtnRemove:hover{
     background-color: black;
   }
 
@@ -254,7 +326,7 @@
   .workTitle{
     border: none;
     height: 1.4rem;
-    width: 10rem;
+    width: 15rem;
     font-family: Helvetica;
     font-size: 17px;
     font-weight: 800;
@@ -394,9 +466,9 @@
   }
 
   .jobBtn{
-    position: absolute;
-    top: 620px;
-    left: 1540px;
+    position: relative;
+    top: 630px;
+    left: 620px;
     background-color: rgb(70, 70, 70);
     color: white;
     border-radius: 10px;
@@ -413,6 +485,35 @@
   }
   
   .projectBtn{
+    position: absolute;
+    top: 25px;
+    left: -70px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+
+  .AddprojectBtn{
+    position: relative;
+    top: 650px;
+    left: 630px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 5.5rem;
+    height: 1.5rem;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .SchoolBtn{
     position: absolute;
     top: 25px;
     left: -70px;

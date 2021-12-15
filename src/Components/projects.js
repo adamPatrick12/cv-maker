@@ -24,7 +24,7 @@ class Projects extends Component {
       };
   
       this.addProjectBullet = this.addProjectBullet.bind(this);
-
+      this.removeProject = this.removeProject.bind(this)
   }
 
   addProjectBullet() {
@@ -33,6 +33,12 @@ class Projects extends Component {
     });
   }
   
+  removeProject(){
+    this.setState({
+      projectList: this.state.projectList.slice(0,-1)
+    });
+  }
+
     render() {
     return (
       <div className="BoxPlacement">
@@ -40,6 +46,7 @@ class Projects extends Component {
           <button className="projectBtn" onClick={this.addProjectBullet}>
             +
           </button>
+          <button className = "BtnRemove2" onClick = {this.removeProject}>-</button>
         </div>
         <div className="workBox">
           <div className="employerBox">
