@@ -9,7 +9,7 @@ const bulletPoint = (
         className="workBullet"
         id="nameBox"
         type="text"
-        placeholder="Describe any relevent information here, scholarships, honours list, course work etc."
+        placeholder="Describe any relevent information here, scholarships, honours list, course work etc.(Keep this section short)"
       />{" "}
     </li>
   );
@@ -21,7 +21,7 @@ class Interests extends Component {
   
         this.state = {
           bullet: [bulletPoint],
-          interestLists: [],
+          interestLists: [bulletPoint],
         };
     
         this.addIntrestssBullet = this.addIntrestssBullet.bind(this);

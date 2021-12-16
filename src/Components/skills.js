@@ -17,9 +17,9 @@ class Skills extends Component {
 
     this.state = {
       skill: [element],
-      skills: [],
-      skills2: [],
-      skills3: [],
+      skills: [element],
+      skills2: [element],
+      skills3: [element],
     };
 
     this.addSkill = this.addSkill.bind(this);

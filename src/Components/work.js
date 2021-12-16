@@ -20,7 +20,7 @@ class Work extends Component {
 
     this.state = {
       bullet: [bulletPoint],
-      workList: [],
+      workList: [bulletPoint],
     };
 
     this.addWorkBullet = this.addWorkBullet.bind(this);

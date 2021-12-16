@@ -8,8 +8,10 @@ import Projects from './Components/projects';
 import Education from './Components/education';
 import Interests from './Components/interest';
 
+
 const workElement = <Work/>
 const projectElement = <Projects/>
+
 
 class App extends Component {
   constructor(){

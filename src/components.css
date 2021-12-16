@@ -17,7 +17,8 @@
     font-size: 40px;
     font-weight: 800;
     text-align: center;
-    color: #519DEF;
+    color: rgb(37,118,232);
+    margin-top: 15px;
   }
 
   .nameInput::placeholder {
@@ -41,7 +42,7 @@
     height: 1rem;
     width: 12rem;
     font-family: Helvetica;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
     text-align: center;
   }
@@ -72,7 +73,7 @@
     font-size: 20px;
     font-weight: 800;
     text-align: start;
-    color: #519DEF;
+    color: rgb(37,118,232);
     margin-left: 2.8rem;
   }
 
@@ -81,7 +82,7 @@
     font-size: 20px;
     font-weight: 800;
     font-family: Helvetica;
-    color: #519DEF;
+    color:rgb(37,118,232);
   }
 
   .skillsInput:focus{
@@ -181,6 +182,7 @@
     background-color: #519DEF ;
     margin-left: 1rem;
     border-radius: 5px;
+    border: 1px solid rgb(98, 98, 98);
   }
 
   .subSkill:focus {
@@ -214,6 +216,19 @@
     height: 1.5rem;
     font-size: 1.4rem;
     padding: 0;
+	  text-transform: uppercase;
+	  text-decoration: none;
+	  background-color: rgb(70, 70, 70);
+	  border-radius: 10px;
+	  transition: all 0.8s ease 0s;
+  }
+
+  .skillsBtn:hover,.skillsBtn2:hover, .skillsBtn3:hover, .jobBtn:hover, .workBtn:hover, .AddprojectBtn:hover, 
+  .BtnRemove:hover,.BtnRemove2:hover, .BtnRemove3:hover, .BtnRemove4:hover, .BtnRemove5:hover, .projectBtn:hover,  .SchoolBtn:hover{
+    text-shadow: 0px 0px 6px rgb(255, 255, 255);
+    background-color: black;
+    border: rgb(255, 255, 255) 1px solid;
+    transition: all 0.8s ease 0s;
   }
 
   .BtnRemove{
@@ -228,6 +243,7 @@
     height: 1.5rem;
     font-size: 1.4rem;
     padding: 0;
+    transition: all 0.8s ease 0s;
   }
 
   .BtnRemove2{
@@ -242,6 +258,7 @@
     height: 1.5rem;
     font-size: 1.4rem;
     padding: 0;
+    transition: all 0.8s ease 0s;
   }
   
 .BtnRemove3{
@@ -256,6 +273,7 @@
     height: 1.5rem;
     font-size: 1.4rem;
     padding: 0;
+    transition: all 0.8s ease 0s;
 }  
 
 .BtnRemove4{
@@ -270,6 +288,7 @@
     height: 1.5rem;
     font-size: 1.4rem;
     padding: 0;
+    transition: all 0.8s ease 0s;
 }
 
 .BtnRemove5{
@@ -284,11 +303,9 @@
     height: 1.5rem;
     font-size: 1.4rem;
     padding: 0;
+    transition: all 0.8s ease 0s;
 }
 
-  .skillsBtn:hover, .skillsBtn2:hover, .skillsBtn3:hover, .jobBtn:hover, .workBtn:hover, .AddprojectBtn:hover, .BtnRemove:hover{
-    background-color: black;
-  }
 
   .skillsBtn2{
     position: absolute;
@@ -302,6 +319,7 @@
     height: 1.5rem;
     font-size: 1.4rem;
     padding: 0;
+    transition: all 0.8s ease 0s;
   }
 
   .skillsBtn3{
@@ -316,6 +334,7 @@
     height: 1.5rem;
     font-size: 1.4rem;
     padding: 0;
+    transition: all 0.8s ease 0s;
   }
 
   .workDiv{
@@ -478,6 +497,7 @@
     font-size: 15px;
     padding: 0;
     margin: 0;
+    transition: all 0.8s ease 0s;
   }
 
   .titlePosition{
@@ -511,6 +531,7 @@
     font-size: 15px;
     padding: 0;
     margin: 0;
+    transition: all 0.8s ease 0s;
   }
 
   .SchoolBtn{
@@ -525,4 +546,5 @@
     height: 1.5rem;
     font-size: 1.4rem;
     padding: 0;
+    transition: all 0.8s ease 0s;
   }

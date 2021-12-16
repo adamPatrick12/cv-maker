@@ -20,7 +20,7 @@ class Projects extends Component {
 
       this.state = {
         bullet: [bulletPoint],
-        projectList: [],
+        projectList: [bulletPoint],
       };
   
       this.addProjectBullet = this.addProjectBullet.bind(this);
