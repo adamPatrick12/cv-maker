@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import '../components.css';
 import BulletPoints from "./workExtension";
 
@@ -14,40 +14,28 @@ const bulletPoint = (
     </li>
   );
 
-class Education extends Component {
+const Education = () => {
    
-    constructor(){
-        super()
+  const [educationList, removeAddEducation] = useState([bulletPoint])
   
-        this.state = {
-          bullet: [bulletPoint],
-          educationList: [bulletPoint],
-        };
     
-        this.addSchoolBullet = this.addSchoolBullet.bind(this);
-        this.removeSchool = this.removeSchool.bind(this);
-    }
+  const addSchoolBullet = () => {
+    removeAddEducation(educationList.concat(bulletPoint))
+  }
   
-    addSchoolBullet() {
-      this.setState({
-        educationList: this.state.educationList.concat(this.state.bullet),
-      });
-    }
+  const removeSchool = () => {
+    removeAddEducation(educationList.slice(0,-1))
+  }
 
-    removeSchool(){
-        this.setState({
-            educationList: this.state.educationList.slice(0,-1)
-        });
-      }
-    
-      render() {
+
+  
       return (
         <div className="BoxPlacement">
           <div className="btnPosition">
-            <button className="SchoolBtn" onClick={this.addSchoolBullet}>
+            <button className="SchoolBtn" onClick={addSchoolBullet}>
                 +
             </button> 
-            <button className = "BtnRemove2" onClick = {this.removeSchool}>-</button>
+            <button className = "BtnRemove2" onClick = {removeSchool}>-</button>
           </div>
           <div className="workBox">
             <div className="employerBox">
@@ -70,11 +58,11 @@ class Education extends Component {
             type="text"
             placeholder="DEGREE"
           />
-              <BulletPoints addWork = {this.state.educationList}/>
+              <BulletPoints addWork = {educationList}/>
           </div>
         </div>
       );
-    }
+    
   }
 
   export default Education

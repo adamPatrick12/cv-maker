@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../components.css";
 import SkillsInfo from "./skillExtension";
 
@@ -11,92 +11,66 @@ const element = (
   />
 );
 
-class Skills extends Component {
-  constructor() {
-    super();
+const Skills = () =>  {
+ 
+  const [skills, addRemoveSkill] = useState([element])
+  const [skills2, addRemoveSkill2] = useState([element])
+  const [skills3, addRemoveSkill3] = useState([element])
 
-    this.state = {
-      skill: [element],
-      skills: [element],
-      skills2: [element],
-      skills3: [element],
-    };
 
-    this.addSkill = this.addSkill.bind(this);
-    this.addSkill2 = this.addSkill2.bind(this);
-    this.addSkill3 = this.addSkill3.bind(this);
-    this.removeSkill = this.removeSkill.bind(this);
-    this.removeSkill2 = this.removeSkill2.bind(this);
-    this.removeSkill3 = this.removeSkill3.bind(this);
-  }
+    
+const addSkill = () =>{
+  addRemoveSkill(skills.concat(element))
+}
+  
+const addSkill2 = () =>{
+  addRemoveSkill2(skills2.concat(element))
+}
+const addSkill3 = () =>{
+  addRemoveSkill3(skills3.concat(element))
+}
 
-  addSkill() {
-    this.setState({
-      skills: this.state.skills.concat(this.state.skill),
-    });
-  }
+const removeSkill = () =>{
+  addRemoveSkill(skills.splice(0,-1))
+}
 
-  removeSkill() {
-    this.setState({
-      skills: this.state.skills.slice(0, -1),
-    });
-  }
+const removeSkill2 = () =>{
+  addRemoveSkill2(skills2.splice(0,-1))
+}
 
-  removeSkill2() {
-    this.setState({
-      skills2: this.state.skills2.slice(0, -1),
-    });
-  }
+const removeSkill3 = () =>{
+  addRemoveSkill3(skills3.splice(0,-1))
+}
 
-  removeSkill3() {
-    this.setState({
-      skills3: this.state.skills3.slice(0, -1),
-    });
-  }
-
-  addSkill2() {
-    this.setState({
-      skills2: this.state.skills2.concat(this.state.skill),
-    });
-  }
-
-  addSkill3() {
-    this.setState({
-      skills3: this.state.skills3.concat(this.state.skill),
-    });
-  }
-
-  render() {
     return (
       <div>
         <div className="btnPosition">
-          <button className="BtnRemove3" onClick={this.removeSkill}>
+          <button className="BtnRemove3" onClick={removeSkill}>
             -
           </button>
-          <button className="skillsBtn" onClick={this.addSkill}>
+          <button className="skillsBtn" onClick={addSkill}>
             +
           </button>
-          <button className="skillsBtn2" onClick={this.addSkill2}>
+          <button className="skillsBtn2" onClick={addSkill2}>
             +
           </button>
-          <button className="BtnRemove4" onClick={this.removeSkill2}>
+          <button className="BtnRemove4" onClick={removeSkill2}>
             -
           </button>
-          <button className="skillsBtn3" onClick={this.addSkill3}>
+          <button className="skillsBtn3" onClick={addSkill3}>
             +
           </button>
-          <button className="BtnRemove5" onClick={this.removeSkill3}>
+          <button className="BtnRemove5" onClick={removeSkill3}>
             -
           </button>
         </div>
         <SkillsInfo
-          addSkillDom={this.state.skills}
-          addSkillDom2={this.state.skills2}
-          addSkillDom3={this.state.skills3}
+          addSkillDom={skills}
+          addSkillDom2={skills2}
+          addSkillDom3={skills3}
         />
       </div>
     );
-  }
 }
 
 export default Skills;

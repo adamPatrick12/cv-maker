@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../components.css";
 import BulletPoints from "./workExtension";
 
@@ -14,39 +14,25 @@ const bulletPoint = (
     </li>
   );
 
-class Projects extends Component {
-  constructor(){
-      super()
-
-      this.state = {
-        bullet: [bulletPoint],
-        projectList: [bulletPoint],
-      };
+const Projects = () => {
   
-      this.addProjectBullet = this.addProjectBullet.bind(this);
-      this.removeProject = this.removeProject.bind(this)
+  const [projectList, changeProjectList] = useState([bulletPoint])
+    
+  const addProjectBullet = () =>{
+    changeProjectList(projectList.concat(bulletPoint))
   }
 
-  addProjectBullet() {
-    this.setState({
-        projectList: this.state.projectList.concat(this.state.bullet),
-    });
-  }
-  
-  removeProject(){
-    this.setState({
-      projectList: this.state.projectList.slice(0,-1)
-    });
+  const removeProject = () =>{
+    changeProjectList(projectList.splice(0,-1))
   }
 
-    render() {
     return (
       <div className="BoxPlacement">
         <div className="btnPosition">
-          <button className="projectBtn" onClick={this.addProjectBullet}>
+          <button className="projectBtn" onClick={addProjectBullet}>
             +
           </button>
-          <button className = "BtnRemove2" onClick = {this.removeProject}>-</button>
+          <button className = "BtnRemove2" onClick = {removeProject}>-</button>
         </div>
         <div className="workBox">
           <div className="employerBox">
@@ -63,11 +49,10 @@ class Projects extends Component {
               placeholder="Jan 20xx - Jan 20xx"
             />
           </div>
-          <BulletPoints addWork = {this.state.projectList} />
+          <BulletPoints addWork = {projectList} />
         </div>
       </div>
     );
-  }
 }
 
 export default Projects;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import '../components.css';
 import BulletPoints from "./workExtension";
 
@@ -14,47 +14,33 @@ const bulletPoint = (
     </li>
   );
 
-class Interests extends Component {
+const Interests = () => {
    
-    constructor(){
-        super()
-  
-        this.state = {
-          bullet: [bulletPoint],
-          interestLists: [bulletPoint],
-        };
-    
-        this.addIntrestssBullet = this.addIntrestssBullet.bind(this);
-        this.removeIntrests = this.removeIntrests.bind(this);
-    }
 
-    removeIntrests(){
-        this.setState({
-            interestLists: this.state.interestLists.slice(0,-1)
-        });
-      }
-  
-    addIntrestssBullet() {
-      this.setState({
-        interestLists: this.state.interestLists.concat(this.state.bullet),
-      });
-    }
-    
-      render() {
+  const [interestsLists, addRemoveBullet] = useState([bulletPoint])
+     
+  const addInterestsBullet = () => {
+    addRemoveBullet(interestsLists.concat(bulletPoint))
+  };
+
+  const removeIntrests = () => {
+    addRemoveBullet(interestsLists.slice(0,-1))
+  };
+
+
       return (
         <div className="BoxPlacement">
           <div className="btnPosition">
-            <button className="SchoolBtn" onClick={this.addIntrestssBullet}>
+            <button className="SchoolBtn" onClick={addInterestsBullet}>
                 +
             </button> 
-            <button className = "BtnRemove2" onClick = {this.removeIntrests}>-</button>
+            <button className = "BtnRemove2" onClick = {removeIntrests}>-</button>
           </div>
           <div className="workBox">
-              <BulletPoints addWork = {this.state.interestLists}/>
+              <BulletPoints addWork = {interestsLists}/>
           </div>
         </div>
       );
-    }
   }
 
   export default Interests;

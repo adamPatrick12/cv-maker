@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../components.css";
 import BulletPoints from "./workExtension";
 
@@ -14,39 +14,25 @@ const bulletPoint = (
   </li>
 );
 
-class Work extends Component {
-  constructor() {
-    super();
+const Work = () => {
+  
+  const [workList, addRemoveWork] = useState([bulletPoint])
 
-    this.state = {
-      bullet: [bulletPoint],
-      workList: [bulletPoint],
-    };
+  const addWorkBullet = () =>{
+    addRemoveWork(workList.concat(bulletPoint))
+  } 
 
-    this.addWorkBullet = this.addWorkBullet.bind(this);
-    this.removeWork = this.removeWork.bind(this)
-  }
+  const removeWork = () =>{
+    addRemoveWork(workList.slice(0,-1))
+  } 
 
-  addWorkBullet() {
-    this.setState({
-      workList: this.state.workList.concat(this.state.bullet),
-    });
-  }
-
-  removeWork(){
-    this.setState({
-        workList: this.state.workList.slice(0,-1)
-    });
-  }
-
-  render() {
     return (
       <div className="BoxPlacement">
         <div className="btnPosition">
-          <button className="workBtn" onClick={this.addWorkBullet}>
+          <button className="workBtn" onClick={addWorkBullet}>
             +
           </button>
-          <button className = "BtnRemove" onClick = {this.removeWork}>-</button>
+          <button className = "BtnRemove" onClick = {removeWork}>-</button>
         </div>
         <div className="workBox">
         <div className="btnPosition">
@@ -71,12 +57,11 @@ class Work extends Component {
             type="text"
             placeholder="POSITION"
           />
-          <BulletPoints addWork={this.state.workList} />
+          <BulletPoints addWork={workList} />
         </div>
 
       </div>
     );
-  }
 }
 
 export default Work;
