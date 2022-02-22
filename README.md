@@ -4,7 +4,7 @@ This application will help you build a professional resume in just a few minutes
 
 ## Live Preview
 
-Go ahead and test it out 👉 [here](https://apatrick.me/cv-maker/)
+Go ahead and test it out 👉 [here](https://adampatrick12.github.io/cv-maker/)
 
 ## Project Preview
 
